@@ -1,28 +1,7 @@
 # TaskFlow — Developer Task OS
 ### FAANG-Level Demo · Deploy in 5 minutes
 
-> "零摩擦的開發者任務管理 — 你的工作流，你的方式"
-
----
-
-## 🚀 5 分鐘部署到 Vercel
-
-```bash
-# 1. Clone or download this repo
-git init taskflow-demo && cd taskflow-demo
-
-# 2. Copy the demo file as index.html
-cp taskflow-demo.html index.html
-
-# 3. Push to GitHub
-git add . && git commit -m "feat: taskflow demo"
-git remote add origin https://github.com/YOUR_USERNAME/taskflow-demo.git
-git push -u origin main
-
-# 4. Import into Vercel
-# Go to vercel.com → New Project → Import your repo → Deploy
-# Done! Live at https://taskflow-demo.vercel.app
-```
+> "零摩擦的開發者任務管理 — 個人工作流+方式"
 
 ---
 
@@ -59,8 +38,15 @@ git push -u origin main
 
 ---
 
-## 📋 Product Spec
+## 📋 Go-to-Market 策略
 
-See `TaskFlow_Product_Spec_FAANG.docx` for full product specification including SWOT analysis, MVP roadmap, and go-to-market strategy.
+-   Developer Communities: Reddit (r/selfhosted, r/devops), Hacker News,
+    Dev.to
+
+-   Product Hunt Launch: 準備 Demo 影片、GIF 展示 Git Sync 效果
+
+-   GitHub Trending: 優化 README，使用 GIF 展示核心功能
+
+-   Tech YouTubers: 聯繫 Fireship、Theo 等開發者 YouTuber
 
 ---
