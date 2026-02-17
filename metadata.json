@@ -1,0 +1,5 @@
+{
+  "name": "TaskFlow",
+  "description": "A developer-centric daily task system featuring Command Palette navigation, Kanban workflow, and Git integration visualization.",
+  "requestFramePermissions": []
+}
