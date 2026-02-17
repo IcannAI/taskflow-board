@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Layout } from './components/Layout';
-import { KanbanBoard } from './components/kanban/kanbanBoard';
+import { KanbanBoard } from './components/kanban/KanbanBoard';
 import { Dashboard } from './components/Dashboard';
 import { CommandPalette } from './components/ui/CommandPalette';
 
