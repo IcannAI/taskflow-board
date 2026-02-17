@@ -3,7 +3,7 @@ import { GitBranch, GitCommit } from 'lucide-react';
 import { Task, TaskStatus } from '../../types';
 import { cn, formatDate } from '../../lib/utils';
 import { useTaskStore } from '../../store/useTaskStore';
-import { ASSIGNEE_COLORS } from './KanbanBoard';
+import { ASSIGNEE_COLORS } from './kanbanBoard';
 import { showToast } from '../Layout';
 
 /* ─────────────────────────────────────────────

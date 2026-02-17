@@ -1,20 +1,31 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, TooltipProps } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  TooltipContentProps,          // ← 新增這個
+} from 'recharts';
 import { Activity, Clock, GitCommit, Zap, GitBranch } from 'lucide-react';
 import { useTaskStore } from '../store/useTaskStore';
 
 // Custom Tooltip for Recharts
-const CustomTooltip = ({ active, payload, label }: TooltipProps<any, any>) => {
+import type { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';  // 可選，但更好
+
+const CustomTooltip = ({ active, payload, label }: TooltipContentProps<ValueType, NameType>) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-surface border border-border p-2 rounded shadow-lg text-xs">
-        <p className="font-semibold text-text">{label}</p>
-        <p className="text-primary">Commits: {payload[0].value}</p>
+        <p className="font-semibold text-text">{label ?? 'Unknown'}</p>
+        <p className="text-primary">Commits: {payload[0]?.value ?? 0}</p>
       </div>
     );
   }
   return null;
 };
+  
 
 export const Dashboard: React.FC = () => {
   const tasks = useTaskStore((state) => state.tasks);
@@ -73,7 +84,7 @@ export const Dashboard: React.FC = () => {
                             tickLine={false} 
                             axisLine={false}
                         />
-                        <Tooltip content={<CustomTooltip />} cursor={{fill: '#27272a'}} />
+                        <Tooltip content={CustomTooltip} cursor={{ fill: '#27272a' }} />
                         <Bar dataKey="commits" fill="#2563eb" radius={[4, 4, 0, 0]} />
                     </BarChart>
                 </ResponsiveContainer>
