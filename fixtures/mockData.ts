@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { Task } from '../types';
 
 export const mockTasks: Task[] = import.meta.env.DEV ? [
