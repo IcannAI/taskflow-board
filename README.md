@@ -50,3 +50,19 @@
 -   Tech YouTubers: 聯繫 Fireship、Theo 等開發者 YouTuber
 
 ---
+
+## 📍 Current Status (v0.1 — MVP Prototype)
+
+| 功能 | 狀態 | 說明 |
+|:---|:---|:---|
+| Kanban Board + 拖曳 | ✅ 完成 | |
+| Command Palette ⌘K | ✅ 完成 | Fuse.js 模糊搜尋 |
+| Dashboard 圖表 | ✅ 完成 | |
+| AI 任務拆解 (Gemini) | ✅ 完成 | 需自備 API Key |
+| 本地持久化 | ✅ 完成 | localStorage via Zustand persist |
+| Git 整合 | 🟡 UI 模擬 | 非真實 git 操作 |
+| 後端 (Hono) | 🔴 Roadmap | |
+| 資料庫 (Turso) | 🔴 Roadmap | |
+| CLI (Commander.js) | 🔴 Roadmap | |
+
+> ⚠️ 這是前端 prototype，資料存於 localStorage。
