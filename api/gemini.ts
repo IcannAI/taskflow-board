@@ -1,7 +1,8 @@
-export default async function handler(
-    req: Request,
-    res: Response
-) {
+export const config = {
+    runtime: 'edge',
+};
+
+export default async function handler(req: Request): Promise<Response> {
     if (req.method !== 'POST') {
         return new Response(JSON.stringify({ error: 'Method not allowed' }), {
             status: 405,
@@ -16,6 +17,7 @@ export default async function handler(
             headers: { 'Content-Type': 'application/json' }
         });
     }
+
     try {
         const body = await req.json();
         const response = await fetch(
